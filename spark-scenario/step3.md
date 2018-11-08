@@ -5,10 +5,8 @@ For this first we need to create a folder inside image folder name as centos.
 
 Now We are going to create Dockerfile inside the centos folder.
 
-`tee ~/Spark/image/centos/Dockerfile <<'EOF' >/dev/null
-
-
-FROM bluedata/centos7:3.1
+echo
+"FROM bluedata/centos7:3.1
 RUN yum install -y http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN yum install -y http://download.fedoraproject.org//pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum install -y expect mysql-server mysql-connector-java \
@@ -38,8 +36,7 @@ RUN mkdir -p /usr/lib/spark/spark-2.1.0-bin-hadoop2.7/logs
 RUN touch /usr/lib/spark/spark-2.1.0-bin-hadoop2.7/logs/Bluedata-spark-logs
 RUN chmod -R 1777 /usr/lib/spark/spark-2.1.0-bin-hadoop2.7/logs/
 
-RUN echo "export PATH=$PATH:/usr/lib/spark/spark-2.1.0-bin-hadoop2.7/bin/" > /etc/profile.d/updatePath.sh
-EOF`{{execute}}
+RUN echo "export PATH=$PATH:/usr/lib/spark/spark-2.1.0-bin-hadoop2.7/bin/" > /etc/profile.d/updatePath.sh" > ~/Spark/image/centos/Dockerfile`{{execute}}
 
 
 Check the content of Dockerfile.
