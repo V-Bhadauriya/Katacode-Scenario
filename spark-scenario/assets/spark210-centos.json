@@ -1,0 +1,133 @@
+{
+    "catalog_api_version": "2", 
+    "config": {
+        "config_meta": {}, 
+        "config_choices": [], 
+        "node_services": [
+            {
+                "service_ids": [
+                    "spark", 
+                    "spark_master", 
+                    "spark_worker", 
+                    "zeppelin-notebook", 
+                    "mysql", 
+                    "ssh"
+                ], 
+                "role_id": "controller"
+            }, 
+            {
+                "service_ids": [
+                    "spark_worker", 
+                    "ssh"
+                ], 
+                "role_id": "worker"
+            }
+        ], 
+        "selected_roles": [
+            "controller", 
+            "worker"
+        ]
+    }, 
+    "image": {
+        "checksum": "2749370325ca2a6074e8d73d968f961c", 
+        "source_file": "bluedata-spark210-centos7-centos-1.0.tar.gz"
+    }, 
+    "label": {
+        "name": "Spark 2.1.0 Hadoop 2.7 Centos 7", 
+        "description": "Apache Spark is general purpose open source in memory computational engine developed by the Apache Software Foundation written in Scala."
+    }, 
+    "distro_id": "bluedata/spark210-centos7", 
+    "version": "1.0", 
+    "services": [
+        {
+            "endpoint": {
+                "port": "22", 
+                "is_dashboard": false
+            }, 
+            "id": "ssh", 
+            "label": {
+                "name": "SSH"
+            }
+        }, 
+        {
+            "endpoint": {
+                "url_scheme": "http", 
+                "path": "/", 
+                "is_dashboard": true, 
+                "port": "8080"
+            }, 
+            "id": "spark", 
+            "label": {
+                "name": "Spark master"
+            }
+        }, 
+        {
+            "exported_service": "spark", 
+            "endpoint": {
+                "url_scheme": "spark", 
+                "is_dashboard": false, 
+                "port": "7077"
+            }, 
+            "id": "spark_master", 
+            "label": {
+                "name": "Spark master"
+            }
+        }, 
+        {
+            "endpoint": {
+                "url_scheme": "http", 
+                "path": "/", 
+                "is_dashboard": true, 
+                "port": "8081"
+            }, 
+            "id": "spark_worker", 
+            "label": {
+                "name": "Spark worker"
+            }
+        }, 
+        {
+            "endpoint": {
+                "is_dashboard": false, 
+                "port": "3306"
+            }, 
+            "id": "mysql", 
+            "label": {
+                "name": "Mysql server"
+            }
+        }, 
+        {
+            "endpoint": {
+                "url_scheme": "http", 
+                "path": "/", 
+                "is_dashboard": true, 
+                "port": "8055"
+            }, 
+            "id": "zeppelin-notebook", 
+            "label": {
+                "name": "Zeppelin server"
+            }
+        }
+    ], 
+    "logo": {
+        "checksum": "9bb5e11afcb76a1d20f0e92d3cf02d40", 
+        "source_file": "Logo_Spark.png"
+    }, 
+    "setup_package": {
+        "config_api_version": 4, 
+        "checksum": "401c15fd47cd9c7583171706dd56e9f2", 
+        "source_file": "appconfig.tgz"
+    }, 
+    "node_roles": [
+        {
+            "cardinality": "1", 
+            "id": "controller"
+        }, 
+        {
+            "cardinality": "0+", 
+            "id": "worker"
+        }
+    ], 
+    "categories": [
+        "Spark"
+    ]
+}

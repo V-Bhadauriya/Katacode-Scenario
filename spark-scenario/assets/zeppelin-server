@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+# Zeppelin server: Bring up/down the Zeppelin service.
+#
+# chkconfig: 35 11 89
+# description:
+
+. /etc/init.d/functions
+
+export TERM='xterm-256color'
+export ZEPPELIN_HOME=@@@@ZEPPELIN_HOME@@@@
+export PATH=$JAVA_HOME/bin:$PATH
+
+rc=0
+ZEPPELIN_DAEMON=${ZEPPELIN_HOME}/bin/zeppelin-daemon.sh
+
+start() {
+    action $"Starting Zeppelin server: " ${ZEPPELIN_DAEMON} start
+    rc=$?
+}
+
+stop() {
+    action $"Stopping Zeppelin server: " ${ZEPPELIN_DAEMON} stop
+    rc=$?
+}
+
+get_status() {
+    action $"Status of Zeppelin server: " ${ZEPPELIN_DAEMON} status
+    rc=$?
+    if [[ $rc -eq 0 ]]; then
+        echo "Zeppelin server is running."
+    else
+        echo "Zeppline server is NOT running."
+    fi
+}
+
+case $1 in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        get_status
+        ;;
+    restart|reload)
+        $0 stop
+        $0 start
+        rc=$?
+        ;;
+    *)
+        echo $"Usage: $0 {start|stop|status|restart|reload)"
+        exit 1
+esac
+
+exit $rc

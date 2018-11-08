@@ -22,7 +22,23 @@
       "text": "finish.md"
     },
     "assets": {
-       "host01": [{"file": "Dockerfile", "target": "~/"}] 
+       "host01": [
+                 {"file": "Dockerfile", "target": "~/"},
+                 {"file": "startscript", "target": "~/",  "chmod": "+x" },
+                 {"file": "hadoop", "target": "~/",  "chmod": "+x" }, 
+                 {"file": "core-site.xml", "target": "~/" },
+                 {"file": "spark-env.sh", "target": "~/",  "chmod": "+x" },    
+                 {"file": "spark-slave", "target": "~/",  "chmod": "+x" },
+                 {"file": "total_vcores.sh", "target": "~/",  "chmod": "+x" },
+                 {"file": "zeppelin-log4j.properties", "target": "~/" },
+                 {"file": "zeppelin-site.xml", "target": "~/" },
+                 {"file": "spark-defaults.conf", "target": "~/" }, 
+                 {"file": "spark-master","target": "~/",  "chmod": "+x" },
+                 {"file": "zeppelin-env.sh","target": "~/",  "chmod": "+x" },
+                 {"file": "zeppelin-server","target": "~/",  "chmod": "+x"},
+                 {"file": "Logo_Spark.png", "target": "~/" },
+                 {"file": "spark210-centos.json", "target": "~/" }
+                ] 
     }
   },
   "environment": {
