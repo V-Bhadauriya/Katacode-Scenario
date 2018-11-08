@@ -1,14 +1,10 @@
 Let's see what you built.
 
-## Task 1 of 3
+## Task 1 
 Exit out of the workbench shell
+<br><br>`exit`{{execute}}
 
-`exit`{{execute}}
-
-## Task 2 of 3
+## Task 2
 The newly built application package (or bundle) is saved in the deliverables directory.
-
-`cd deliverables`{{execute}}
-
-`ls `{{execute}}
-
+<br><br>`cd deliverables`{{execute}}
+<br>`ls `{{execute}}
