@@ -91,7 +91,7 @@ The services defined here are only registered and started if the specific node i
 
 #Task 11:
 Setting the logo for bin.
-`cp ~/Logo_Spark.png ~/Spark`{{execute}}
+`logo file --filepath Logo_Spark.png`{{execute}}
 
 #Task 12:
 Catalog the package for Centos

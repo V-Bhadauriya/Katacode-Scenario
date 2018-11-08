@@ -79,3 +79,7 @@ Copying zeppelin-site.xml file.
 
 To view the content of zeppelin-site.xml file. Please execute the below command.
 `cat ~/Spark/appconfig/zeppelin-site.xml`{{execute}}
+
+#Task 12:
+Copying the logo file.
+`cp ~/test/Logo_Spark.png ~/Spark`{{execute}}
