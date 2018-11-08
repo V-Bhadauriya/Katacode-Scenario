@@ -24,7 +24,7 @@
     "assets": {
         "host01": {
             "file": "files.tar.gz",
-            "target": "/"
+            "target": "~/"
         }
     }
   },
