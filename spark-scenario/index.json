@@ -22,10 +22,7 @@
       "text": "finish.md"
     },
     "assets": {
-        "host01": {
-            "client": "files.tar.gz",
-            "target": "~/"
-        }
+       "host01": [{"file": "Dockerfile", "target": "/root/"}] 
     }
   },
   "environment": {
