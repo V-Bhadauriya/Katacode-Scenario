@@ -23,7 +23,7 @@
     },
     "assets": {
         "host01": {
-            "file": "Logo_Spark.png",
+            "file": "files.tar.gz",
             "target": "/"
         }
     }
