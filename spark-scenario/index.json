@@ -15,7 +15,8 @@
 { "title": "Step 8 - Checking the Bin File For Spark.", "text": "step8.md"}
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code" : "init.sh"
     },
     "finish": {
       "text": "finish.md"
