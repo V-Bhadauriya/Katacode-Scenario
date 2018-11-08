@@ -23,7 +23,7 @@
     },
     "assets": {
         "host01": {
-            "file": "files.tar.gz",
+            "client": "files.tar.gz",
             "target": "~/"
         }
     }
