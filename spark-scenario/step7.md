@@ -96,7 +96,7 @@ Setting the logo for bin.
 #Task 12:
 Catalog the package for Centos
 
-`image build --basedir image/centos --imgversion 1.0 --os centos`{{execute}}
+`image build --basedir image/centos --imgversion 1.0 --os centos7`{{execute}}
 `catalog save --filepath staging/spark210-centos.json --force`{{execute}}
 `sources package`{{execute}}
 `catalog package --os=centos`{{execute}} 

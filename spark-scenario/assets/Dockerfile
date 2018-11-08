@@ -1,7 +1,7 @@
 # Spark-2.1 docker image for RHEL/CentOS 7.x
 
 
-FROM bluedata/centos7:3.1
+FROM bluedata/centos7:4.0
 # Install EPEL repo
 #RUN yum install -y http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN yum install -y http://download.fedoraproject.org//pub/epel/epel-release-latest-7.noarch.rpm
