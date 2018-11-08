@@ -7,5 +7,5 @@ Now We are going to create Dockerfile inside the centos folder. But we already h
 `cp ~/test/Dockerfile ~/Spark/image/centos`{{execute}}
 
 If you want to see the content of Dockerfile please execute below.
-`cat ~/Spark/image/centos/Dokcerfile`{{execute}}
+`cat ~/Spark/image/centos/Dockerfile`{{execute}}
 
