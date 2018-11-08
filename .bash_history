@@ -684,3 +684,45 @@ cp /tmp/bluedata-catalog-Spark2.1-official/*.png .
 ls
 cd ..
 cat /tmp/bluedata-catalog-Spark2.1-official/*.wb
+ls
+rm spark-scenario/ -rf
+ls
+git pull
+ls
+ls
+ls /tmp/
+cd /home/
+ls
+cp Scenario/ /home/vs.bhadauriya/ -r
+ls
+cd /home/vs.bhadauriya/
+ls
+cd Scenario/
+ls
+vi init.sh 
+cd ..
+ls
+git add --all
+git push origin -f
+git commit -m "done"
+cd Scenario/
+katacoda push
+ls
+cat init.sh 
+cd ..
+ls
+git add --refresh
+git add -all --refresh
+git add --all --refresh
+git push origin -f
+git commit -m "done."
+cd Scenario/
+katacoda push
+cat /tmp/bluedata-catalog-Spark2.1-official/*.wb
+ls
+cd ..
+ls
+cd /tmp/
+ls
+yum install rar
+exit

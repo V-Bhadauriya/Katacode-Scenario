@@ -88,7 +88,8 @@ Setting the logo for bin.
 ## Task 12:
 Catalog the package for Centos
 
-`image build --basedir image/centos --imgversion 1.0 --os centos7`{{execute}}
+`image build --basedir image/centos --image-repotag bluedata/spark2.1.0-7x:1.0`{{execute}}
+<br><br>`image package --image-repotag bluedata/spark2.1.0-7x:1.0 --os centos7`{{execute}}
 <br><br>`catalog save --filepath staging/spark210-centos.json --force`{{execute}}
 <br><br>`sources package`{{execute}}
-<br><br>`catalog package --os=centos`{{execute}}
+<br><br>`catalog package`{{execute}}
