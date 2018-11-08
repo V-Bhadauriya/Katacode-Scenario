@@ -9,7 +9,7 @@ Now We are going to create Dockerfile inside the centos folder.
 
 
 FROM bluedata/centos7:3.1
-#RUN yum install -y http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+RUN yum install -y http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN yum install -y http://download.fedoraproject.org//pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum install -y expect mysql-server mysql-connector-java \
                    php-5.3.3 php-xml php-pear php-gd R R-devel libcurl-devel openssl-devel
